@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贵州省乡村振兴可视化</title>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <h1>贵州省乡村振兴</h1>
+        <div class="show-time"></div>
+        <script>
+            var t = null;
+            t = setTimeout(time, 1000); //开始运行
+            function time() {
+                clearTimeout(t); //清除定时器
+                dt = new Date();
+                var y = dt.getFullYear();
+                var mt = dt.getMonth() + 1;
+                var day = dt.getDate();
+                var h = dt.getHours(); //获取时
+                var m = dt.getMinutes(); //获取分
+                var s = dt.getSeconds(); //获取秒
+                document.querySelector(".show-time").innerHTML =
+                    "当前时间：" +
+                    y +
+                    "年" +
+                    mt +
+                    "月" +
+                    day +
+                    "日-" +
+                    h +
+                    "时" +
+                    m +
+                    "分" +
+                    s +
+                    "秒";
+                t = setTimeout(time, 1000); //设定定时器，循环运行
+            }
+        </script>
+    </header>
+
+    <!-- 页面主体 -->
+    <section class="mainbox">
+        <!-- 左侧盒子 -->
+        <div class="column">
+            <div class="panel bar">
+                <h2>贵州农村居民人均可支配收入</h2>
+                <!-- 图表放置盒子 -->
+                <div class="chart"></div>
+                <!-- 伪元素绘制盒子下边角 -->
+                <div class="panel-footer"></div>
+            </div>
+
+
+
+
+            <div class="panel line">
+                <h2>贵州省乡村发展指标
+                </h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+
+
+
+
+
+            <div class="panel pie">
+                <h2>贵州省人口年龄指数分布</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <!-- 中间盒子 -->
+        <div class="column">
+
+            <!-- 头部 no模块 -->
+            <div class="no">
+                <div class="no-hd">
+                    <ul>
+                        <li>3852万人</li>
+                        <li>1759.21万人</li>
+                    </ul>
+                </div>
+                <div class="no-bd">
+                    <ul>
+                        <li>贵州省总人数</li>
+                        <li>贵州省乡村人数</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="na">
+                <div class="banner">
+                    <div class="banner-box">
+                        <div class="banner-item">
+                            <img src="./images/11.png">
+                            <img src="./images/12.png">
+                            <img src="./images/13.png">
+                            <img src="./images/14.png">
+                            <img src="./images/15.png">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="weizi">
+                    <ul>
+                        <li>
+                            <p> 产业兴，则乡村兴。贵州坚持把产业发展作为促进乡村振兴的根本之策，不断完善现代农业产业体系、生产体系、经营体系，夯实乡村全面振兴的物质基础。深化省领导领衔制度， 专班化推进12个农业特色优势产业发展，加快推进林下经济高质量发展，完善农民作为种养主体的利益联结机制， 着力建设现代山地特色高效农业强省。
+                            </p>
+                            <p> 阔步新征程，贵州把乡村振兴作为“三大战略行动”之一，推动巩固拓展脱贫攻坚成果同乡村振兴有效衔接，全面推进产业、人才、文化、生态、组织振兴，加快农业农村现代化，走具有贵州特色的乡村振兴之路。
+
+                            </p>
+                            <p> 在乡村振兴道路上，贵州应立足新发展阶段、贯彻新发展理念，各地区要紧密依托自身优势资源，凝聚各民族的强大力量，实施更为有力的政策措施，着眼于产业提升，走出一条产业振兴的高质量发展之路，为乡村的全面振兴、全方位振兴奠定坚实的产业根基。
+
+                            </p>
+                            <p> 以高质量党建引领现代农业农村高质量发展，贵州奋笔书写乡村振兴大文章，推动农业农村现代化，把乡村产业发展得更好、把乡村建设得更美，努力实现农业高质高效、乡村宜居宜业、农民富裕富足，在全面推进乡村振兴中继续打造省级样板，开创百姓富、生态美的多彩贵州新未来。
+
+                            </p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 右侧盒子 -->
+        <div class="column">
+            <div class="panel bar2">
+                <h2>农产品占比</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel line2">
+                <h2>农村社会基础设施</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+            <div class="panel pie2">
+                <h2>贵州省各市地区人口分布</h2>
+                <div class="chart"></div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
